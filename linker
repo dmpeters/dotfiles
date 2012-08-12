@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+if [ -z "$PS1" ]; then
+  echo -e "${COLOR_RED}You should source this, not run it, for example: source link${COLOR_NC}\n\n"
+fi
+
+rm ~/.bash_profile
+rm ~/.bashrc
+ln -s ~/Projects/dotfiles/bash_profile ~/.bash_profile
+ln -s ~/Projects/dotfiles/bashrc ~/.bashrc
+
+# git
+rm ~/.gitconfig
+rm ~/.gitignore
+ln -s ~/Projects/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/Projects/dotfiles/gitignore ~/.gitignore
+
+# vim
+rm -rf ~/.vim
+rm -rf ~/.vimrc
+ln -s ~/Projects/dotfiles/vim ~/.vim
+ln -s ~/Projects/dotfiles/vim/vimrc ~/.vimrc
+
+# irssi
+rm -rf ~/.irssi
+ln -s ~/Projects/dotfiles/irssi ~/.irssi
+
+source ~/.bash_profile
+echo ':: success ::'

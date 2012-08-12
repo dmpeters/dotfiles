@@ -1,0 +1,100 @@
+# Other aliases ----------------------------------------------------
+alias ll='ls -hl'
+alias la='ls -a'
+alias lla='ls -lah'
+
+# OS-X SPECIFIC - the -G command in OS-X is for colors, in Linux it's no groups
+alias ls='ls -G'
+alias lsg='ls -g'
+
+alias ..='cd ..'
+alias cdd='cd -'
+alias home='cd ~'
+alias disk='cd /'
+alias c='clear'
+
+alias showinv='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
+alias hideinv='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
+
+# Misc aliases -----------------------------------------------------
+alias gr='grep -i'  # Case insensitive grep
+alias f='find . -iname'
+alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
+alias tu='top -o cpu' # cpu
+alias tm='top -o vsize' # memory
+alias systail='tail -f /var/log/system.log'
+alias m='more'
+alias df='df -h'
+
+# utility
+alias reload='source ~/Projects/dotfiles/bash/aliases'
+alias resource='source ~/Projects/dotfiles/bash/env'
+alias ea='mate -w ~/Projects/dotfiles/bash/aliases && reload'
+alias ee='mate ~/Projects/dotfiles/bash/env && resource'
+alias evh='mate /etc/hosts && sudo apachectl restart'
+alias evh='mate /etc/apache2/extra/httpd-vhosts.conf && mate /etc/hosts && sudo apachectl restart'
+
+# apache2
+alias a2restart='sudo apachectl restart'
+alias a2start='sudo apachectl start'
+alias a2stop='sudo apachectl stop'
+alias a2log='tail -f /var/log/apache2/error_log'
+
+# Shows most used commands, cool script I got this from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
+alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
+
+# git
+alias g='git status'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+function gg() {
+	git commit -v -a -m "$*"
+}
+alias gco='git checkout'
+alias gd='gitt diff'
+alias gdm='git diff master'
+alias gh='github'
+alias gl='git pull'
+alias gnp='git-notpushed'
+alias gp='git push'
+alias gst='git status'
+alias gt='git status'
+alias eg='mate .git/config'
+# Git clone from GitHub
+function gch() {
+  git clone git://github.com/$USER/$1.git
+}
+
+# TextMate
+alias et="mate"
+alias ett="mate ."
+
+# sublime
+alias s='open -a "Sublime Text 2"'
+
+# MySQL start/stop
+alias mysqlstart='mysql.server start'
+alias mysqlstart='mysql.server stop'
+alias mysqltest='cd /usr/local/Cellar/mysql/5.5.12/mysql-test ; perl mysql-test-run.pl'
+
+# Postgres start/stop
+alias postgrestart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias postgrestop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+
+# python & django
+alias py='python'
+alias ds='./manage.py runserver'
+
+# rails
+alias ss='./script/server'
+alias sq='./script/generate'
+alias sp='./script/plugin install'
+alias sc='./script/console'
+alias r='rake'
+alias rmig='rake db:migrate'
+
+# Zend
+alias zf='/usr/local/ZendFramework-1.11.10/bin/zf.sh'
+alias ztail='tail -n100 /tmp/zend.log'

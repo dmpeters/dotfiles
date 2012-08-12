@@ -1,0 +1,62 @@
+# Colors ----------------------------------------------------------
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export CLICOLOR=1 
+
+# Setup some colors to use later in interactive shell or scripts
+export COLOR_NC='\033[0m' # No Color
+export COLOR_WHITE='\033[1;37m'
+export COLOR_BLACK='\033[0;30m'
+export COLOR_BLUE='\033[0;34m'
+export COLOR_LIGHT_BLUE='\033[1;34m'
+export COLOR_GREEN='\033[0;32m'
+export COLOR_LIGHT_GREEN='\033[1;32m'
+export COLOR_CYAN='\033[0;36m'
+export COLOR_LIGHT_CYAN='\033[1;36m'
+export COLOR_RED='\033[0;31m'
+export COLOR_LIGHT_RED='\033[1;31m'
+export COLOR_PURPLE='\033[0;35m'
+export COLOR_LIGHT_PURPLE='\033[1;35m'
+export COLOR_YELLOW='\033[1;33m'
+export COLOR_GRAY='\033[1;30m'
+export COLOR_LIGHT_GRAY='\033[0;37m'
+alias colorslist="set | egrep 'COLOR_\w*'"  # Lists all the colors, uses vars in .bashrc_non-interactive
+
+# Misc -------------------------------------------------------------
+export HISTCONTROL=ignoredups
+shopt -s checkwinsize # After each command, checks the windows size and changes lines and columns
+
+# bash completion settings (actually, these are readline settings)
+bind "set completion-ignore-case on" # note: bind used instead of sticking these in .inputrc
+bind "set bell-style none" # no bell
+bind "set show-all-if-ambiguous On" # show list automatically, without double tab
+
+# Turn on advanced bash completion if the file exists
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
+# Prompts ----------------------------------------------------------
+# Parse Git Branch
+function parse_git_branch {
+	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+# Primary prompt with only a path
+if [ -n "$SSH_CLIENT" ]; then
+    export PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\]\[\e[0;37m\]'
+else
+	export PS1="\[${COLOR_LIGHT_PURPLE}\]\u \[${COLOR_LIGHT_GREEN}\]\w \[${COLOR_LIGHT_CYAN}\]\$(parse_git_branch)\[${COLOR_LIGHT_GRAY}\] > "
+fi
+
+# This runs before the prompt and sets the title of the xterm* window.  If you set the title in the prompt
+# weird wrapping errors occur on some systems, so this method is superior
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -ne "\007"'  # user@host path
+
+export PS2='> '    # Secondary prompt
+export PS3='#? '   # Prompt 3
+export PS4='+'     # Prompt 4
+
+function xtitle {  # change the title of your xterm* window
+  unset PROMPT_COMMAND
+  echo -ne "\033]0;$1\007" 
+}

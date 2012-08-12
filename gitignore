@@ -1,0 +1,11 @@
+.DS_Store
+.svn
+*.pyc
+*.db
+*.swp
+*~
+%*
+.ctrlp_cache
+.netrwhist
+*.sass-cache/
+*.sql
