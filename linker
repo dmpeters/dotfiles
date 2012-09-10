@@ -6,11 +6,8 @@ fi
 # git
 rm ~/.gitconfig
 rm ~/.gitignore
-rm ~/.git-completion.sh
 ln -s ~/Projects/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/Projects/dotfiles/gitignore ~/.gitignore
-ln -s ~/Projects/dotfiles/git-completion.sh ~/.git-completion.sh
-source ~/.git-completion.sh
 
 # vim
 rm -rf ~/.vim

@@ -7,6 +7,11 @@ if [ -d ~/bin ]; then
 	export PATH=:~/bin:$PATH
 fi
 
+# Homebrew's own bash completion script
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 # Python ---
 export PYTHONPATH=~/usr/local/Cellar/python/2.7.3/bin:/usr/local/share/python:$PYTHONPATH
 
@@ -16,9 +21,9 @@ export LANG=en_US.UTF-8
 # virtualenvwrapper ---
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
-export VIRTUALENV_USE_DISTRIBUTE=True
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-source /usr/local/share/python/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/share/python/virtualenvwrapper.sh
+source /usr/local/share/python/virtualenvwrapper_lazy.sh
 
 # loads EDITOR ---
 #export EDITOR='subl -w'
