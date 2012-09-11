@@ -1,4 +1,4 @@
-# Colors ----------------------------------------------------------
+# Colors ---
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1 
 
@@ -21,7 +21,7 @@ export COLOR_GRAY='\033[1;30m'
 export COLOR_LIGHT_GRAY='\033[0;37m'
 alias colorslist="set | egrep 'COLOR_\w*'"  # Lists all the colors, uses vars in .bashrc_non-interactive
 
-# Misc -------------------------------------------------------------
+# Misc ---
 export HISTCONTROL=ignoredups
 shopt -s checkwinsize # After each command, checks the windows size and changes lines and columns
 
@@ -35,13 +35,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-# Prompts ----------------------------------------------------------
-# Parse Git Branch
-function parse_git_branch {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
-# Primary prompt with only a path
+# Prompt ---
 if [ -n "$SSH_CLIENT" ]; then
     export PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\]\[\e[0;37m\]'
 else
@@ -55,8 +49,3 @@ export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -n
 export PS2='> '    # Secondary prompt
 export PS3='#? '   # Prompt 3
 export PS4='+'     # Prompt 4
-
-function xtitle {  # change the title of your xterm* window
-  unset PROMPT_COMMAND
-  echo -ne "\033]0;$1\007" 
-}
