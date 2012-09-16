@@ -81,9 +81,6 @@ augroup end
 let NERDTreeIgnore=['\.pyc$','\~$']
 map <LocalLeader>n :execute 'NERDTreeToggle'<cr>
 
-" python tab spacing
-autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
-
 "{{{ Supporting files
 silent! runtime plugins
 "}}}
