@@ -19,15 +19,14 @@ fi
 export LANG=en_US.UTF-8
 
 # virtualenvwrapper ---
-# export WORKON_HOME=$HOME/.virtualenvs
-# export PROJECT_HOME=$HOME/Projects
-# export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
-# export VIRTUALENVWRAPPER_SCRIPT=/usr/local/share/python/virtualenvwrapper.sh
-# source /usr/local/share/python/virtualenvwrapper_lazy.sh
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/share/python/virtualenvwrapper.sh
+source /usr/local/share/python/virtualenvwrapper_lazy.sh
 
 # loads RVM ---
-[[ -s "/Users/dmpeters/.rvm/scripts/rvm" ]] && source "/Users/dmpeters/.rvm/scripts/rvm"
+# [[ -s "/Users/dmpeters/.rvm/scripts/rvm" ]] && source "/Users/dmpeters/.rvm/scripts/rvm"
 
 # loads EDITOR ---
-#export EDITOR='subl -w'
-export EDITOR='vim -w'
+export EDITOR='subl -w'
