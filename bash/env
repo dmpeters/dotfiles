@@ -1,5 +1,5 @@
-# Python ---
-export PYTHONPATH=/usr/local/Cellar/python/2.7.3/bin:/usr/local/lib/python2.7/bin:/usr/local/lib/python2.7/site-packages:/usr/local/share/python:$PYTHONPATH
+# PYTHONPATH ---
+export PYTHONPATH=/usr/local/Cellar/python/2.7.3/bin:/usr/local/lib/python2.7/bin:/usr/local/share/python
 
 # Path ---
 export PATH=$PYTHONPATH:/usr/local/Cellar/ruby/1.9.3-p194/bin:/usr/local/bin:/usr/local/sbin:$PATH
@@ -19,6 +19,7 @@ fi
 export LANG=en_US.UTF-8
 
 # virtualenvwrapper ---
+export VIRTUALENV_DISTRIBUTE=true
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
