@@ -30,9 +30,9 @@ bind "set show-all-if-ambiguous On" # show list automatically, without double ta
 
 # Prompt ---
 if [ -n "$SSH_CLIENT" ]; then
-    export PS1='\[${txtpur}\] \[\e[${txtgrn}\]\w\[\e[m\] \[\e[${txtcyn}\]\$\[\e[m\]\[${txtwht}\]'
+    export PS1='\[\e[${txtgrn}\]\w\[\e[m\] \[\e[${txtcyn}\]\$\[\e[m\]\[${txtwht}\]'
 else
-    export PS1="\[${txtpur}\]\u \[${txtgrn}\]\w\[${txtcyn}\]\$(__git_ps1)\[${txtwht}\] > "
+    export PS1="\[${txtgrn}\]\w\[${txtcyn}\]\$(__git_ps1)\[${txtwht}\] > "
 fi
 
 # This runs before the prompt and sets the title of the xterm* window.  If you set the title in the prompt
