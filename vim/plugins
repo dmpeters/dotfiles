@@ -1,5 +1,6 @@
 " Modularized configuration for vim
 " Stolen From Sarkis Varozian <svarozian@gmail.com>
+" https://github.com/sarkisv/vimfiles
 
 " Plugins
 if v:version < 700
