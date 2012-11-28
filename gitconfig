@@ -1,9 +1,9 @@
 [user]
-	name = dmpeters
-	email = dmpeters63@gmail.com
+	name = David Peters
+	email = dpeters@mediatemple.net
 
 [color]
-	ui = true
+	ui = auto
 	diff = auto
 	status = auto
 	branch = auto

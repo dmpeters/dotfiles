@@ -35,28 +35,15 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-# Prompts ----------------------------------------------------------
-# Parse Git Branch
-function parse_git_branch {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
+# Prompt ----
 # Primary prompt with only a path
 if [ -n "$SSH_CLIENT" ]; then
     export PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\]\[\e[0;37m\]'
 else
-	export PS1="\[${COLOR_LIGHT_PURPLE}\]\u \[${COLOR_LIGHT_GREEN}\]\w\[${COLOR_LIGHT_CYAN}\]\$(__git_ps1)\[${COLOR_LIGHT_GRAY}\] > "
+	#export PS1="\[${COLOR_LIGHT_PURPLE}\]\u \[${COLOR_LIGHT_GREEN}\]\w\[${COLOR_LIGHT_CYAN}\]\$(__git_ps1)\[${COLOR_LIGHT_GRAY}\] > "
+	export PS1="\[${COLOR_LIGHT_GREEN}\]\w\[${COLOR_LIGHT_CYAN}\]\$(__git_ps1)\[${COLOR_LIGHT_GRAY}\] > "
 fi
-
-# This runs before the prompt and sets the title of the xterm* window.  If you set the title in the prompt
-# weird wrapping errors occur on some systems, so this method is superior
-export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -ne "\007"'  # user@host path
 
 export PS2='> '    # Secondary prompt
 export PS3='#? '   # Prompt 3
 export PS4='+'     # Prompt 4
-
-function xtitle {  # change the title of your xterm* window
-  unset PROMPT_COMMAND
-  echo -ne "\033]0;$1\007" 
-}
