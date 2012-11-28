@@ -12,9 +12,8 @@ ln -s ~/Projects/dotfiles/gitignore ~/.gitignore
 # vim
 rm -rf ~/.vim
 rm -rf ~/.vimrc
-
-# irssi
-rm -rf ~/.irssi
+ln -s ~/Projects/dotfiles/vim ~/.vim
+ln -s ~/Projects/dotfiles/vim/vimrc ~/.vimrc
 
 # shell
 rm ~/.bash_profile
