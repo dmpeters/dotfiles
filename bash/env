@@ -27,6 +27,7 @@ export LANG=en_US.UTF-8
 
 # virtualenvwrapper ---
 export VIRTUALENV_DISTRIBUTE=true
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/share/python/virtualenv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
 export PROJECT_HOME=$HOME/Projects
