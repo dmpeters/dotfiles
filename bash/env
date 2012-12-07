@@ -1,5 +1,5 @@
 # PYTHONPATH ---
-export PYTHONPATH=/usr/local/Cellar/python/2.7.3/bin:/usr/local/lib/python2.7/bin:/usr/local/share/python
+export PYTHONPATH=/usr/local/share/python
 
 # NODEPATH ---
 export NODEPATH=/usr/local/share/npm/bin
@@ -36,4 +36,4 @@ source /usr/local/share/python/virtualenvwrapper_lazy.sh
 # [[ -s "/Users/dmpeters/.rvm/scripts/rvm" ]] && source "/Users/dmpeters/.rvm/scripts/rvm"
 
 # loads EDITOR ---
-export EDITOR='subl -w'
+export EDITOR='vim -w'

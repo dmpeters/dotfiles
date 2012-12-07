@@ -29,10 +29,8 @@ alias df='df -h'
 # utility
 alias reload='source ~/Projects/dotfiles/bash/aliases'
 alias resource='source ~/Projects/dotfiles/bash/env'
-alias ea='mate -w ~/Projects/dotfiles/bash/aliases && reload'
-alias ee='mate ~/Projects/dotfiles/bash/env && resource'
-alias evh='mate /etc/hosts && sudo apachectl restart'
-alias evh='mate /etc/apache2/extra/httpd-vhosts.conf && mate /etc/hosts && sudo apachectl restart'
+alias ea='vim -w ~/Projects/dotfiles/bash/aliases && reload'
+alias ee='vim -w ~/Projects/dotfiles/bash/env && resource'
 
 # apache2
 alias a2restart='sudo apachectl restart'
@@ -59,20 +57,7 @@ alias gh='github'
 alias gl='git pull'
 alias gnp='git-notpushed'
 alias gp='git push'
-alias gst='git status'
-alias gt='git status'
-alias eg='mate .git/config'
-# Git clone from GitHub
-function gch() {
-  git clone git://github.com/$USER/$1.git
-}
-
-# TextMate
-alias et="mate"
-alias ett="mate ."
-
-# sublime
-alias s='open -a "Sublime Text 2"'
+alias eg='vim -w .git/config'
 
 # MySQL start/stop
 alias mysqlstart='mysql.server start'
@@ -95,6 +80,3 @@ alias sc='./script/console'
 alias r='rake'
 alias rmig='rake db:migrate'
 
-# Zend
-alias zf='/usr/local/ZendFramework-1.11.10/bin/zf.sh'
-alias ztail='tail -n100 /tmp/zend.log'
