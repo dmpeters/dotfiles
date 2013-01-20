@@ -32,13 +32,8 @@ alias resource='source ~/Projects/dotfiles/bash/env'
 alias ea='vim -w ~/Projects/dotfiles/bash/aliases && reload'
 alias ee='vim -w ~/Projects/dotfiles/bash/env && resource'
 
-# apache2
-alias a2restart='sudo apachectl restart'
-alias a2start='sudo apachectl start'
-alias a2stop='sudo apachectl stop'
-alias a2log='tail -f /var/log/apache2/error_log'
-
-# Shows most used commands, cool script I got this from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
+# Shows most used commands, cool script I got this from: 
+# http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 
 # git
@@ -59,11 +54,6 @@ alias gnp='git-notpushed'
 alias gp='git push'
 alias eg='vim -w .git/config'
 
-# MySQL start/stop
-alias mysqlstart='mysql.server start'
-alias mysqlstart='mysql.server stop'
-alias mysqltest='cd /usr/local/Cellar/mysql/5.5.12/mysql-test ; perl mysql-test-run.pl'
-
 # Postgres start/stop
 alias postgrestart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias postgrestop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
@@ -71,12 +61,3 @@ alias postgrestop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 # python & django
 alias py='python'
 alias ds='./manage.py runserver'
-
-# rails
-alias ss='./script/server'
-alias sq='./script/generate'
-alias sp='./script/plugin install'
-alias sc='./script/console'
-alias r='rake'
-alias rmig='rake db:migrate'
-
