@@ -3,8 +3,6 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1 
 
 # Setup some colors to use later in interactive shell or scripts
-export txtblk='\e[0;30m' # Black
-export txtpur='\e[1;30m' # Grey
 export txtwht='\e[0;37m' # White
 export txtred='\e[0;31m' # Red
 export txtlre='\e[1;31m' # Light Red
@@ -32,12 +30,8 @@ bind "set show-all-if-ambiguous On" # show list automatically, without double ta
 if [ -n "$SSH_CLIENT" ]; then
     export PS1='\[${txtpur}\] \[\e[${txtgrn}\]\w\[\e[m\] \[\e[${txtcyn}\]\$\[\e[m\]\[${txtwht}\]'
 else
-	export PS1="\[${txtpur}\]\u \[${txtgrn}\]\w\[${txtcyn}\]\$(__git_ps1)\[${txtwht}\] > "
+	export PS1=" \[${txtgrn}\]\w\[${txtcyn}\]\$(__git_ps1)\[${txtwht}\] > "
 fi
-
-# This runs before the prompt and sets the title of the xterm* window.  If you set the title in the prompt
-# weird wrapping errors occur on some systems, so this method is superior
-export PROMPT_COMMAND='echo -ne "\033]0;${USER} ${PWD}"; echo -ne "\007"'  # user@host path
 
 export PS2='> '    # Secondary prompt
 export PS3='#? '   # Prompt 3
