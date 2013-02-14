@@ -41,6 +41,7 @@ Bundle "wgibbs/vim-irblack"
 Bundle "gmarik/vundle"
 Bundle "Lokaltog/vim-powerline"
 Bundle "tir_black"
+Bundle "jedi-vim"
 "}}}
 
 "{{{ Plugin specific settings
