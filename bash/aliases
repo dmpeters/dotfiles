@@ -29,8 +29,6 @@ alias df='df -h'
 # utility
 alias reload='source ~/Projects/dotfiles/bash/aliases'
 alias resource='source ~/Projects/dotfiles/bash/env'
-alias ea='vim -w ~/Projects/dotfiles/bash/aliases && reload'
-alias ee='vim -w ~/Projects/dotfiles/bash/env && resource'
 
 # apache2
 alias a2restart='sudo apachectl restart'
@@ -43,21 +41,20 @@ alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' 
 
 # git
 alias g='git status'
+alias ga='git add .'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
-function gg() {
-	git commit -v -a -m "$*"
-}
 alias gco='git checkout'
 alias gd='gitt diff'
 alias gdm='git diff master'
-alias gh='github'
 alias gl='git pull'
 alias gnp='git-notpushed'
 alias gp='git push'
-alias eg='vim -w .git/config'
+function gg() {
+    git commit -v -a -m "$*"
+}
 # Git clone from GitHub
 function gch() {
   git clone git://github.com/$USER/$1.git
@@ -71,21 +68,28 @@ alias mysqlstart='mysql.server start'
 alias mysqlstart='mysql.server stop'
 alias mysqltest='cd /usr/local/Cellar/mysql/5.5.12/mysql-test ; perl mysql-test-run.pl'
 
-# Postgres start/stop
-alias postgrestart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias postgrestop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-
 # python & django
 alias py='python'
 alias ds='./manage.py runserver'
 
-# rails
-alias ss='./script/server'
-alias sq='./script/generate'
-alias sp='./script/plugin install'
-alias sc='./script/console'
-alias r='rake'
-alias rmig='rake db:migrate'
-
 # (mt) specific
-# alias visagelist='/opt/mt/bin/visage list res'
+alias dev03='ssh dpeters@dev03.mtsvc.net'
+alias gproj='git project'
+alias gprojs='git-project-subtree'
+
+# alias visage='sudo /opt/mt/bin/visage -v'
+# alias vsg='visage'
+# alias vsgco='vsg connect'
+# alias vsgcr='vsg create debian'
+# alias vsgde='vsg destroy'
+# alias vsgl='vsg list'
+# alias vsglf='vsg list | visage_machine_list_formatter'
+# alias vsglc='vsgl clusters'
+# alias vsgld='vsgl domains'
+# alias vsglr='vsgl resources'
+# alias vsgrs='vsg restart'
+# alias vsgstart='vsg start'
+# alias vsgstop='vsg stop'
+
+
+
