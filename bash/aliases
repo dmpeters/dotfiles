@@ -61,3 +61,4 @@ alias postgrestop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 # python & django
 alias py='python'
 alias ds='./manage.py runserver'
+alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \;'
