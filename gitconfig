@@ -1,15 +1,18 @@
 [user]
-	name = David Peters
-	email = dpeters@mediatemple.net
+    name = David Peters
+    email = dpeters@mediatemple.net
 
 [color]
-	ui = auto
-	diff = auto
-	status = auto
-	branch = auto
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
 
 [core]
-	excludesfile = /Users/dmpeters/.gitignore
+excludesfile = /Users/dmpeters/.gitignore
 
 [github]
     user = dmpeters
+
+[push]
+    default = simple
