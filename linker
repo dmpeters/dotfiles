@@ -16,7 +16,7 @@ ln -s ~/dotfiles/vim ~/.vim
 ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 
 # shell
-rm ~/.bash_profile
+rm ~/.profile
 rm ~/.bashrc
 ln -s ~/dotfiles/profile ~/.profile
 ln -s ~/dotfiles/bashrc ~/.bashrc
