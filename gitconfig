@@ -2,17 +2,5 @@
     name = David Peters
     email = dpeters@mediatemple.net
 
-[color]
-    ui = auto
-    diff = auto
-    status = auto
-    branch = auto
-
-[core]
-excludesfile = /Users/dmpeters/.gitignore
-
 [github]
     user = dmpeters
-
-[push]
-    default = simple

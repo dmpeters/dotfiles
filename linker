@@ -3,12 +3,6 @@ if [ -z "$PS1" ]; then
   echo -e "${COLOR_RED}You should source this, not run it, for example: source link${COLOR_NC}\n\n"
 fi
 
-# git
-rm ~/.gitconfig
-rm ~/.gitignore
-ln -s ~/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/dotfiles/gitignore ~/.gitignore
-
 # vim
 rm -rf ~/.vim
 rm -rf ~/.vimrc
