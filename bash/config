@@ -1,8 +1,0 @@
-# Misc ---
-export HISTCONTROL=ignoredups
-
-# Prompt ---
-export PS1='\[\e\w\[\e[m\] \[\e\$\[\e[m\]\'
-export PS2='> '    # Secondary prompt
-export PS3='#? '   # Prompt 3
-export PS4='+'     # Prompt 4
