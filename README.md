@@ -1,4 +1,4 @@
-Collection of my dotfiles. 
+(mt) version for visage dotfiles
 
-I keep these files in ~/Projects/dotfiles directory and link
+I keep these files in ~/dotfiles directory and link
 the dotfiles in my home directory (see linker).

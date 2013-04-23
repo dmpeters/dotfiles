@@ -3,18 +3,11 @@ alias ll='ls -hl'
 alias la='ls -a'
 alias lla='ls -lah'
 
-# OS-X SPECIFIC - the -G command in OS-X is for colors, in Linux it's no groups
-alias ls='ls -G'
-alias lsg='ls -g'
-
 alias ..='cd ..'
 alias cdd='cd -'
 alias home='cd ~'
 alias disk='cd /'
 alias c='clear'
-
-alias showinv='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
-alias hideinv='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
 
 # Misc aliases -----------------------------------------------------
 alias gr='grep -i'  # Case insensitive grep
@@ -26,18 +19,11 @@ alias systail='tail -f /var/log/system.log'
 alias m='more'
 alias df='df -h'
 
-# utility
-alias reload='source ~/Projects/dotfiles/bash/aliases'
-alias resource='source ~/Projects/dotfiles/bash/env'
-
 # apache2
 alias a2restart='sudo apachectl restart'
 alias a2start='sudo apachectl start'
 alias a2stop='sudo apachectl stop'
 alias a2log='tail -f /var/log/apache2/error_log'
-
-# Shows most used commands, cool script I got this from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
-alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 
 # git
 alias g='git status'
@@ -52,44 +38,11 @@ alias gdm='git diff master'
 alias gl='git pull'
 alias gnp='git-notpushed'
 alias gp='git push'
-function gg() {
-    git commit -v -a -m "$*"
-}
-# Git clone from GitHub
-function gch() {
-  git clone git://github.com/$USER/$1.git
-}
-
-# sublime
-alias s='open -a "Sublime Text 2"'
 
 # MySQL start/stop
 alias mysqlstart='mysql.server start'
 alias mysqlstart='mysql.server stop'
-alias mysqltest='cd /usr/local/Cellar/mysql/5.5.12/mysql-test ; perl mysql-test-run.pl'
-
-# python & django
-alias py='python'
-alias ds='./manage.py runserver'
 
 # (mt) specific
-alias dev03='ssh dpeters@dev03.mtsvc.net'
 alias gproj='git project'
 alias gprojs='git-project-subtree'
-
-# alias visage='sudo /opt/mt/bin/visage -v'
-# alias vsg='visage'
-# alias vsgco='vsg connect'
-# alias vsgcr='vsg create debian'
-# alias vsgde='vsg destroy'
-# alias vsgl='vsg list'
-# alias vsglf='vsg list | visage_machine_list_formatter'
-# alias vsglc='vsgl clusters'
-# alias vsgld='vsgl domains'
-# alias vsglr='vsgl resources'
-# alias vsgrs='vsg restart'
-# alias vsgstart='vsg start'
-# alias vsgstop='vsg stop'
-
-
-

@@ -6,20 +6,20 @@ fi
 # git
 rm ~/.gitconfig
 rm ~/.gitignore
-ln -s ~/Projects/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/Projects/dotfiles/gitignore ~/.gitignore
+ln -s ~/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/dotfiles/gitignore ~/.gitignore
 
 # vim
 rm -rf ~/.vim
 rm -rf ~/.vimrc
-ln -s ~/Projects/dotfiles/vim ~/.vim
-ln -s ~/Projects/dotfiles/vim/vimrc ~/.vimrc
+ln -s ~/dotfiles/vim ~/.vim
+ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 
 # shell
 rm ~/.bash_profile
 rm ~/.bashrc
-ln -s ~/Projects/dotfiles/bash_profile ~/.bash_profile
-ln -s ~/Projects/dotfiles/bashrc ~/.bashrc
+ln -s ~/dotfiles/profile ~/.profile
+ln -s ~/dotfiles/bashrc ~/.bashrc
 
 source ~/.bash_profile
 echo ':: success ::'
