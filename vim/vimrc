@@ -1,4 +1,7 @@
 " Minified vim configuration
+" Stolen From Sarkis Varozian <svarozian@gmail.com>
+" https://github.com/sarkisv/vimfiles
+
 " Settings
 
 "{{{ General behavior
