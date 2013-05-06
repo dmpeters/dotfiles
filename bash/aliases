@@ -5,7 +5,7 @@ alias lla='ls -lah'
 
 # OS-X SPECIFIC - the -G command in OS-X is for colors, in Linux it's no groups
 alias ls='ls -G'
-alias lsg='ls -g'
+# alias lsg='ls -g'
 
 alias ..='cd ..'
 alias cdd='cd -'
