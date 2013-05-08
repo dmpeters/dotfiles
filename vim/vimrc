@@ -80,6 +80,7 @@ augroup end
 
 " NERDTree ignore
 let NERDTreeIgnore=['\.pyc$','\~$']
+let g:NERDTreeWinPos = "right"
 map <LocalLeader>n :execute 'NERDTreeToggle'<cr>
 
 "{{{ Supporting files

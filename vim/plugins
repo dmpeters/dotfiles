@@ -42,6 +42,7 @@ Bundle "gmarik/vundle"
 Bundle "Lokaltog/vim-powerline"
 Bundle "tir_black"
 Bundle "davidhalter/jedi-vim"
+Bundle "flazz/vim-colorschemes"
 "}}}
 
 "{{{ Plugin specific settings
