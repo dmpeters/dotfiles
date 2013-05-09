@@ -73,7 +73,7 @@ alias py='python'
 alias ds='./manage.py runserver'
 
 # (mt) specific
-alias dev03='ssh dpeters@dev03.mtsvc.net'
+alias dev03='ssh -A dpeters@dev03.mtsvc.net'
 alias gproj='git project'
 alias gprojs='git-project-subtree'
 
