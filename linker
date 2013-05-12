@@ -3,14 +3,14 @@
 # git
 rm ~/.gitconfig
 rm ~/.gitignore
-ln -s ~/Projects/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/Projects/dotfiles/gitignore ~/.gitignore
+ln -s ~/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/dotfiles/gitignore ~/.gitignore
 
 # shell
 rm ~/.bash_aliases
 rm ~/.profile
-ln -s ~/Projects/dotfiles/aliases ~/.bash_aliases
-ln -s ~/Projects/dotfiles/profile ~/.profile
+ln -s ~/dotfiles/aliases ~/.bash_aliases
+ln -s ~/dotfiles/profile ~/.profile
 
 source ~/.bashrc
 source ~/.profile
