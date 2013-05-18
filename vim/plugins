@@ -34,13 +34,9 @@ Bundle "scrooloose/nerdtree"
 Bundle "scrooloose/nerdcommenter"
 Bundle "bingaman/vim-sparkup"
 Bundle "tpope/vim-surround"
-Bundle "jmcantrell/vim-virtualenv"
-Bundle "kevinw/pyflakes-vim"
 Bundle "nanotech/jellybeans.vim"
-Bundle "wgibbs/vim-irblack"
 Bundle "gmarik/vundle"
 Bundle "Lokaltog/vim-powerline"
-Bundle "tir_black"
 "}}}
 
 "{{{ Plugin specific settings
