@@ -38,6 +38,7 @@ Bundle "nanotech/jellybeans.vim"
 Bundle "gmarik/vundle"
 Bundle "Lokaltog/vim-powerline"
 Bundle "flazz/vim-colorschemes"
+Bundle "saltstack/salt-vim"
 "}}}
 
 "{{{ Plugin specific settings
