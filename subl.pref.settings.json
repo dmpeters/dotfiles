@@ -1,0 +1,42 @@
+{
+	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+    "theme": "zenburn.sublime-theme",
+	"completions":
+	[
+		{
+			"contents": "import pdb; pdb.set_trace()",
+			"trigger": "pdb"
+		},
+		{
+			"contents": "# -*- coding: utf-8 -*-",
+			"trigger": "utf8"
+		}
+	],
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"*.pid",
+		"*.pyc",
+        "*.db",
+        "*.sql"
+	],
+	"folder_exclude_patterns":
+	[
+		".git",
+		"__pycache__",
+		"env",
+		"env3"
+	],
+	"git_gutter_live_mode": true,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"rulers": [80],
+	"scope": "source.python - variable.other.python",
+	"scroll_past_end": false,
+	"show_minimap": false,
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}

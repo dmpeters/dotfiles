@@ -1,11 +1,11 @@
 # PYTHONPATH ---
-export PYTHONPATH=/usr/local/share/python
+# export PYTHONPATH=/usr/local/share/python
 
 # NODEPATH ---
-export NODEPATH=/usr/local/share/npm/bin
+# export NODEPATH=/usr/local/share/npm/bin
 
 # PATH ---
-export PATH=$PYTHONPATH:$NODEPATH:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # add your bin folder to the path, if you have it.
 # It's a good place to add all your scripts
@@ -23,11 +23,11 @@ export LANG=en_US.UTF-8
 
 # virtualenvwrapper ---
 export VIRTUALENV_DISTRIBUTE=true
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/share/python/virtualenv
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
 export PROJECT_HOME=$HOME/Projects
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/share/python/virtualenvwrapper_lazy.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 # loads EDITOR ---
 export EDITOR='vim -w'
