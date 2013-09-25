@@ -75,6 +75,10 @@ alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \;'
 
 # (mt) specific
 alias dev03='ssh -A dpeters@dev03.mtsvc.net'
+alias dev04='ssh -A dpeters@dev04.mtsvc.net'
+alias dev05='ssh -A dpeters@dev05.mtsvc.net'
+alias dev06='ssh -A dpeters@dev06.mtsvc.net'
+alias dev07='ssh -A dpeters@dev07.mtsvc.net'
 alias gproj='git project'
 alias gprojs='git-project-subtree'
 
