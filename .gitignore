@@ -4,3 +4,6 @@ sessions
 away.log
 .netrwhist
 powerline-bash/*
+vim/bundle
+vim/tmp
+packer_cache

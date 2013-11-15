@@ -81,6 +81,7 @@ alias dev06='ssh -A dpeters@dev06.mtsvc.net'
 alias dev07='ssh -A dpeters@dev07.mtsvc.net'
 alias gproj='git project'
 alias gprojs='git-project-subtree'
+alias mtups=dev_load
 
 # alias visage='sudo /opt/mt/bin/visage -v'
 # alias vsg='visage'
@@ -96,5 +97,6 @@ alias gprojs='git-project-subtree'
 # alias vsgstart='vsg start'
 # alias vsgstop='vsg stop'
 
-
-
+dev_load() {
+    for i in $(seq 1 7); do ssh dev0${i}.mtsvc.net "uptime" | echo "dev0${i}: $(awk -F, '{ print $4, $5, $6 }')"; done
+}

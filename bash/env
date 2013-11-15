@@ -6,7 +6,10 @@
 # export NODEPATH=/usr/local/share/npm/bin
 
 # RUBYPATH ---
-# export RUBYPATH=/usr/local/Cellar/ruby/1.9.3-p327/bin
+# export RUBYPATH=/usr/local/Cellar/ruby/2.0.0-p247/bin
+
+# PACKER ---
+# export PACKER="/usr/local/packer"
 
 # PATH ---
 # export PATH=$PYTHONPATH:/usr/local/bin:/usr/local/sbin:$PATH
