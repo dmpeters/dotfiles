@@ -13,3 +13,5 @@
 
 [github]
     user = dmpeters
+[push]
+	default = simple

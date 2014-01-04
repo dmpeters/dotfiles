@@ -13,9 +13,6 @@ alias home='cd ~'
 alias disk='cd /'
 alias c='clear'
 
-alias showinv='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
-alias hideinv='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
-
 # Misc aliases -----------------------------------------------------
 alias gr='grep -i'  # Case insensitive grep
 alias f='find . -iname'
@@ -32,7 +29,7 @@ alias resource='source ~/Projects/dotfiles/bash/env'
 alias ea='vim -w ~/Projects/dotfiles/bash/aliases && reload'
 alias ee='vim -w ~/Projects/dotfiles/bash/env && resource'
 
-# Shows most used commands, cool script I got this from: 
+# Shows most used commands, cool script I got this from:
 # http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 
@@ -48,15 +45,13 @@ function gg() {
 alias gco='git checkout'
 alias gd='gitt diff'
 alias gdm='git diff master'
-alias gh='github'
 alias gl='git pull'
-alias gnp='git-notpushed'
 alias gp='git push'
 alias eg='vim -w .git/config'
 
 # Postgres start/stop
-alias postgrestart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias postgrestop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+# alias postgrestart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+# alias postgrestop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 # python & django
 alias py='python'

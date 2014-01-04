@@ -5,7 +5,7 @@
 # export NODEPATH=/usr/local/share/npm/bin
 
 # PATH ---
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/packer:$PATH
 
 # add your bin folder to the path, if you have it.
 # It's a good place to add all your scripts
@@ -15,19 +15,20 @@ fi
 
 # Homebrew's > Versions > bash-completion script
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+. $(brew --prefix)/etc/bash_completion
 fi
 
 # Language ---
 export LANG=en_US.UTF-8
 
 # virtualenvwrapper ---
-export VIRTUALENV_DISTRIBUTE=true
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
-export PROJECT_HOME=$HOME/Projects
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper_lazy.sh
+export PROJECT_HOME=$HOME/Projects
+source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
 
 # loads EDITOR ---
 export EDITOR='vim -w'
