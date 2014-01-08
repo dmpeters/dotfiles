@@ -30,13 +30,13 @@ fi
 export LANG=en_US.UTF-8
 
 # virtualenvwrapper ---
-export VIRTUALENV_DISTRIBUTE=true
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects
+source /usr/local/bin/virtualenvwrapper.sh
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
-export PROJECT_HOME=$HOME/Projects
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper_lazy.sh
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
 
 # loads RVM ---
 # [[ -s "/Users/dmpeters/.rvm/scripts/rvm" ]] && source "/Users/dmpeters/.rvm/scripts/rvm"
