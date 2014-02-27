@@ -1,0 +1,27 @@
+# Other aliases ----------------------------------------------------
+alias ll='ls -hl'
+alias la='ls -a'
+alias lla='ls -lah'
+alias ..='cd ..'
+alias cdd='cd -'
+alias home='cd ~'
+alias disk='cd /'
+alias c='clear'
+
+# Misc aliases -----------------------------------------------------
+alias gr='grep -i'  # Case insensitive grep
+alias f='find . -iname'
+alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
+alias tu='top -o cpu' # cpu
+alias tm='top -o vsize' # memory
+alias systail='tail -f /var/log/system.log'
+alias m='more'
+alias df='df -h'
+
+# utility
+alias reload='source ~/Projects/dotfiles/bash/aliases'
+alias resource='source ~/Projects/dotfiles/bash/env'
+
+# python & django
+alias py='python'
+alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \;'
