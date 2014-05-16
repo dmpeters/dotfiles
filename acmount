@@ -1,0 +1,41 @@
+#!/bin/bash
+
+if [[ ! ( -d lib && -d root && -d nova ) ]]; then
+    echo "Only run this in an accountcenter clone or directory"
+    exit
+fi
+
+function mount_it() {
+    LOCAL=$1
+    SYSTEM=$2
+
+    if ! mount | grep $2 &>/dev/null; then
+	sudo mount --bind $1 $2
+    else
+	echo "$2 already mounted"
+    fi
+}
+
+function unmount_it() {
+    SYSTEM=$1
+
+    if mount | grep $1 &>/dev/null; then
+	sudo umount $1
+    else
+	echo "$1 already unmounted"
+    fi
+}
+
+if [[ -z $1 ]]; then
+    echo 'Bind-mounting AC folders'
+
+    mount_it $PWD/lib/AccountCenter /usr/share/perl5/AccountCenter
+    mount_it $PWD/root /opt/mt/var/www/accountcenter/html
+    mount_it $PWD/nova /opt/mt/var/www/accountcenter/nova
+else
+    echo 'Unmounting AC folder bind-mounts'
+
+    unmount_it /usr/share/perl5/AccountCenter
+    unmount_it /opt/mt/var/www/accountcenter/html
+    unmount_it /opt/mt/var/www/accountcenter/nova
+fi
