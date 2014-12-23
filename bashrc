@@ -1,4 +1,5 @@
 # Load in .bashrc ------------------------------------------------
-source /Users/dp/Projects/dotfiles/bash/env
-source /Users/dp/Projects/dotfiles/bash/aliases
-source /Users/dp/Projects/dotfiles/bash/config
+
+source $HOME/Projects/dotfiles/bash/env
+source $HOME/Projects/dotfiles/bash/aliases
+source $HOME/Projects/dotfiles/bash/config
